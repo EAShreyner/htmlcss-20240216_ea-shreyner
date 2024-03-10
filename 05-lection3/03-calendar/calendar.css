@@ -34,12 +34,12 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: "header header header header header header header"
-                         "main main main main main main main"
+    /* grid-template-areas: "a a a a a a a"
+                         "b b b b b b b"
                          "c c c c c c c"
                          "d d d d d d d"
                          "e e e e e e e"
-                         "f f f f f f f" ;
+                         "f f f f f f f" ; */
 
 
     grid-column-start: 1;
@@ -52,22 +52,34 @@
     left: 0;
     right: 0;
     bottom: 0;
+
+    grid-column-start: 1;
+    grid-row-start: 5;
+    grid-row-end: 1;
+    grid-column-end: 5;
+
+
+
+
 }
 
-.calendar__inner__calendar__item {
-    grid-area: header;
-    background-color: red;
-}
+/* .calendar__inner {
+    grid-area: a;
+    color: red;
+} */
 
 
 
  .calendar__item-day {
-    
+    display: flex;
     margin-bottom: 8px;
     font-size: 14px;
     line-height: 20px;
     font-family: Inter;
     color: rgba(144, 160, 183, 1);
+    justify-content: center;
+    align-items: center;
+
 }
 
 
@@ -83,11 +95,32 @@
     
 
     /* удалить снизу*/
-    border: solid;
+    /* border: solid;
     border-color: var(--grey-3);
-    border-width: 1px;
+    border-width: 1px; */
     /* удалить сверху*/
 
 
+}
+
+.calendar__item-v {display: flex;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: Source Sans Pro;
+    background-color: rgba(66, 99, 235, 1);
+    color: var(--white);
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar__item-c {display: flex;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: Source Sans Pro;
+    background-color: rgba(160, 177, 245, 1);
+    
+    color: rgba(51, 77, 110, 1);
+    justify-content: center;
+    align-items: center;
 }
 
