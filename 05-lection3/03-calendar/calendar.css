@@ -1,0 +1,93 @@
+.calendar{
+    width: 324px;
+    
+    display: grid;
+    border: solid;
+    border-color: var(--grey-3);
+    border-radius: 8px;
+    border-width: 1px;
+    padding-top: 28px;
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-bottom: 32px;
+}
+
+.calendar__title {
+    padding-bottom: 24px;
+    font-size: 20px;
+    line-height: 24px;
+    
+    font-family: Inter;
+    text-align: center;
+    color: rgba(51, 77, 110, 1);
+}
+
+.calendar__wrapper { 
+    position: relative;
+    padding-bottom: 100%;
+    
+}
+
+
+
+.calendar__inner {   
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "header header header header header header header"
+                         "main main main main main main main"
+                         "c c c c c c c"
+                         "d d d d d d d"
+                         "e e e e e e e"
+                         "f f f f f f f" ;
+
+
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    position: absolute;  
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.calendar__inner__calendar__item {
+    grid-area: header;
+    background-color: red;
+}
+
+
+
+ .calendar__item-day {
+    
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Inter;
+    color: rgba(144, 160, 183, 1);
+}
+
+
+.calendar__item {
+    display: flex;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: Source Sans Pro;
+    color: rgba(51, 77, 110, 1);
+    justify-content: center;
+    align-items: center;
+
+    
+
+    /* удалить снизу*/
+    border: solid;
+    border-color: var(--grey-3);
+    border-width: 1px;
+    /* удалить сверху*/
+
+
+}
+
